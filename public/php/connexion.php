@@ -11,7 +11,7 @@
 
     <h2>Connexion</h2>
 
-    <form action="process_login.php" method="post">
+    <form method="post">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br>
 
@@ -27,6 +27,8 @@
 
 
 <?php
+session_start();
+
 require_once('bddconnexion.php');
 
 function test_input($data)
@@ -48,11 +50,10 @@ try {
         $user = $query->fetch(PDO::FETCH_ASSOC);
 
         if ($user && password_verify($password, $user['password'])) {
-            // La connexion réussie, vous pouvez rediriger l'utilisateur vers une page d'accueil, par exemple.
-            header('Location: process_login.php');
+            $_SESSION["user_id"] = $user['id'];
+            header("Location: ajout_d'evenement.php");
             exit();
         } else {
-            // Mauvais email ou mot de passe
             echo 'Identifiants invalides. Veuillez réessayer.';
         }
     }

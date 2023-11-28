@@ -2,11 +2,11 @@ const $menuLis = document.querySelectorAll('.menu ul li');
 const $galleryItems = document.querySelectorAll('.gallery-item');
 const $playerIcons = document.querySelectorAll('div .player_btn');
 const $muteIcons = document.querySelectorAll('div .mute_btn');
-var volIcon = document.querySelector('.volume')
-var volBox = document.querySelector('.volume-box')
-var volumeRange = document.querySelector('.volume-range')
-var volumeDown = document.querySelector('.volume-down')
-var volumeUp = document.querySelector('.volume-up')
+var $volIcon = document.querySelector('.volume')
+var $volBox = document.querySelector('.volume-box')
+var $volumeRange = document.querySelector('.volume-range')
+var $volumeDown = document.querySelector('.volume-down')
+var $volumeUp = document.querySelector('.volume-up')
 var music = document.querySelector('.music-element')
 var playBtn = document.querySelector('.play')
 var seekbar = document.querySelector('.seekbar')
@@ -131,18 +131,18 @@ function handleRepeat() {
 }
 
 function handleVolume() {
-    volIcon.classList.toggle('active')
-    volBox.classList.toggle('active')
+    $volIcon.classList.toggle('active')
+    $volBox.classList.toggle('active')
 }
 
 volumeDown.addEventListener('click', handleVolumeDown);
 volumeUp.addEventListener('click', handleVolumeUp);
 
 function handleVolumeDown() {
-    volumeRange.value = Number(volumeRange.value) - 20
-    music.volume = volumeRange.value / 100
+    $volumeRange.value = Number(volumeRange.value) - 20
+    music.volume = $volumeRange.value / 100
 }
 function handleVolumeUp() {
-    volumeRange.value = Number(volumeRange.value) + 20
-    music.volume = volumeRange.value / 100
+    $volumeRange.value = Number(volumeRange.value) + 20
+    music.volume = $volumeRange.value / 100
 }

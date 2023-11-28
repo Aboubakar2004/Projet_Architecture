@@ -80,6 +80,7 @@
                 </div>
             </div>
         </div>
+        <img src="../../src/image/artist-no-background.png" alt="" class="singer">
     </div>
 
     <div class="in-coming">
@@ -151,69 +152,136 @@
 
     <div class="others">
         <h2 class="window-title">Vous pourriez également aimer</h2>
-        <div class="others-artists">
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-02" alt="" class="others-artist-background">
+        <div class="container-slide">
+            <div class="others-artists">
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-02" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-03" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-04" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-05" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-06" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-07" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-08" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-09" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-10" alt="" class="others-artist-background">
+                </div>
             </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-03" alt="" class="others-artist-background">
-            </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-04" alt="" class="others-artist-background">
-            </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-05" alt="" class="others-artist-background">
-            </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-06" alt="" class="others-artist-background">
-            </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-07" alt="" class="others-artist-background">
-            </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-08" alt="" class="others-artist-background">
-            </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-09" alt="" class="others-artist-background">
-            </div>
-            <div class="artist">
-                <h2 class="artist-name">John Doe</h2>
-                <h3 class="album-name">album 2</h3>
-                <img src="../../src/image/localisation.svg" alt="ping" class="locate">
-                <p class="event-date">20/09/24</p>
-                <img src="../../src/image/artist-10" alt="" class="others-artist-background">
+            <div class="others-artists">
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-02" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-03" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-04" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-05" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-06" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-07" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-08" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-09" alt="" class="others-artist-background">
+                </div>
+                <div class="artist">
+                    <h2 class="artist-name">John Doe</h2>
+                    <h3 class="album-name">album 2</h3>
+                    <img src="../../src/image/localisation.svg" alt="ping" class="locate">
+                    <p class="event-date">20/09/24</p>
+                    <img src="../../src/image/artist-10" alt="" class="others-artist-background">
+                </div>
             </div>
         </div>
     </div>

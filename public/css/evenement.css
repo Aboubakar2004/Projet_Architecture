@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     font-family: inter;
+    background-color: #000;
+    color: #ffffff;
 }
 
 .header{
@@ -35,12 +37,13 @@ body{
 }
 
 .profil-name{
+    margin-right: 10px;
     font-size: 16px;
     font-weight: 400;
-    
 }
 
 .profile-picture{
+    margin-right: 15px;
     width: 50px;
     height: 50px;
     border-radius: 25px;
@@ -62,6 +65,7 @@ body{
 .hero{
     position: relative;
     margin: 50px 90px 0px 90px;
+    overflow: hidden;
 }
 
 .who{
@@ -132,6 +136,15 @@ body{
     object-fit: cover;
     overflow: hidden;
     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+.singer{
+    height: 600px;
+    position: absolute;
+    right: -10%;
+    bottom: 300px;
+    z-index: 1;
 }
 
 .others-musics{
@@ -144,7 +157,7 @@ body{
 
 .music{
     position: relative;
-    width: 20%;
+    width: 250px;
     height: 150px;
     border-radius: 10px;
     overflow: hidden;
@@ -218,7 +231,6 @@ body{
     height: 150px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
 }
 
 .event-text{
@@ -270,7 +282,7 @@ body{
     gap: 20px;
     font-size: 12px;
     font-weight: 400;
-    color: #000000a4;
+    color: #ffffff9a;
 }
 
 .event .tickets-available{
@@ -287,9 +299,11 @@ body{
 }
 
 .event-icon{
-    padding-right: 10px;
+    margin-right: 10px;
     width: 20px;
     height: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
 
 .info{
@@ -337,12 +351,32 @@ body{
     overflow: hidden;
 }
 
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.container-slide{
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.container-slide:hover{
+    animation-play-state: paused;
+}
+
 .others-artists{
+    margin-right: 20px;
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    overflow-x: scroll;
+    animation: 30s slide infinite linear;
 }
 
 .others-artists::-webkit-scrollbar{
@@ -400,4 +434,158 @@ body{
 
 .artist:hover .album-name, .artist:hover .locate, .artist:hover .event-date{
     display: inline-block;
+}
+
+@media (max-width: 1250px){
+
+    .who-name{
+        margin: 0;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 78px;
+    }
+
+    .adress{
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .horaire{
+        margin: 0;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .description{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .map{
+        width: 400px;
+        height: 150px;
+        border-radius: 8px;
+        object-fit: cover;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .singer{
+        height: 450px;
+        position: absolute;
+        right: -20%;
+        bottom: 450px;
+        z-index: 1;
+    }
+
+    .others-musics{
+    align-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1000px){
+
+    .event{
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        height: 400px;
+    }
+
+    .event-image{
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #7D7D7D;
+        object-fit: cover;
+    }
+
+    .event-description{
+        margin: 0;
+        max-width: 300px;
+        /* max-height: 50px; */
+        font-size: 12px;
+        font-weight: 500;
+        overflow-y: scroll;
+    }
+
+    .event .icons{
+        position: absolute;
+        display: flex;
+        justify-content: space-around;
+        align-items: end;
+        right: 0;
+        bottom: 95px;
+    }
+}
+
+@media (max-width: 850px){
+
+    .head{
+        justify-content: space-between;
+    }
+
+    .nav{
+        align-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero{
+        position: relative;
+        margin: 50px 50px 0px 50px;
+        overflow: hidden;
+    }
+
+    .who{
+        width: 250px;
+    }
+
+    .align{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .play-button{
+        width: 60px;
+        height: 60px;
+    }
+
+    .map{
+        width: 250px;
+        height: 150px;
+        border-radius: 8px;
+        object-fit: cover;
+        overflow: hidden;
+        z-index: 2;
+    }
+
+    .singer{
+        display: none;
+    }
+
+    .in-coming-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .in-coming{
+        margin: 0 50px 0 50px;
+    }
+
+    .others{
+        margin: 0 50px 0 50px;
+        overflow: hidden;
+    }
 }

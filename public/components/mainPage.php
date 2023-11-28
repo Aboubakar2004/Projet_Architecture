@@ -241,7 +241,7 @@
     <div class="w-1/2 flex flex-col gap-3 items-start ">
         <h1 class="text-5xl font-bold">SOUTENEZ VOTRE <br/><span class="text-[#FF9A02]">INDÉ</span> !</h1>
         <p class="text-lg">Muli est une police de caractères sans empattement minimaliste, conçue pour une utilisation à la fois en typographie d'affichage et en typographie de texte. </p>
-        <button class="flex justify-center items-center border-[1px] py-1 px-3 border-[#FF9A02] rounded-md">Choisir son artiste</button>
+        <button class="flex justify-center items-center border-[1px] py-1 px-3 border-[#FF9A02] rounded-md"><a href="../views/help.php">Choisir son artiste</a></button>
     </div>
    </section>
 </div>

@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="/public/css/output.css">
     <link rel="stylesheet" href="/src/input.css">
     <link rel="stylesheet" href="../css/mainPage.css">
-    <link rel="stylesheet" href="../css/mainPage.css">
-    <link rel="stylesheet" href="../css/mainPage.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>

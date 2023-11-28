@@ -4,23 +4,17 @@
             <ion-icon class="cursor-pointer" name="menu-outline"></ion-icon>
         </div>
         <div class="cursor-pointer">
-        BORUSSIA DORTMUND
+        SPOTLIGHT
         </div>
 
         <div class="flex items-center gap-2">
-    <?php
-    session_start();
-
-    // Check if the user is logged in
-    if (isset($_SESSION['user_name'])) {
-        $userName = $_SESSION['user_name'];
-        // Display the user's name as a link to the personalization page
-        echo '<a href="http://localhost/Projet_Architecture/public/php/personalisation_du_profil.php"" class="cursor-pointer hidden md:flex">' . $userName . '</a>';
-    } else {
-        // User is not logged in, display login link
-        echo '<div class="cursor-pointer hidden md:flex">se connecter</div>';
-    }
-    ?>
+    <div class="menu-deroulant">
+        <span>Fabrice</span>
+        <div>
+            <a href="#">Mon Profil</a>
+            <a href="#">Déconnexion</a>
+        </div>
+    </div>
             <div>
                 <img class="w-10 h-10 object-cover rounded-full cursor-pointer" src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg" alt="#">
             </div>
@@ -38,4 +32,16 @@
         </ul>
     </nav>
 </header>
+
+
+<?php
+//session_start();
+//
+  //  if (isset($_SESSION['user_name'])) {
+    //    $userName = $_SESSION['user_name'];
+      //  echo '<a href="../views/personalisation_du_profil.php" class="cursor-pointer hidden md:flex">' . $userName . '</a>';
+    //} else {
+      //  echo '<div class="cursor-pointer hidden md:flex"><a href="http://localhost/Projet_Architecture/public/php/connexion.php"se connecter</div>';
+    //}
+    //?>
 

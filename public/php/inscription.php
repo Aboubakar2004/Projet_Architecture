@@ -31,6 +31,9 @@
 
             <label for="commercant">Commerçant</label>
             <input type="radio" id="commercant" name="role" value="commercant"><br>
+
+            <label for="Utilisateur">Utilisateur</label>
+            <input type="radio" id="Utilisateur" name="role" value="Utilisateur"><br>
         </div>
 
         <div>
@@ -50,31 +53,26 @@
 <?php
 require_once('bddconnexion.php');
 
-function test_input($data)
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+
 
 try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $firstname = test_input($_POST['prenom']);
-        $lastname = test_input($_POST['nom']);
-        $email = test_input($_POST['email']);
-        $number = test_input($_POST['telephone']);
-        $password = test_input($_POST['password']);
+        $firstname = $_POST['prenom'];
+        $lastname = $_POST['nom'];
+        $email = $_POST['email'];
+        $number = $_POST['telephone'];
+        $password = $_POST['password'];
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
         $id_photo = $_FILES['pieceIdentite']['name'];
         $created_at = date('Y-m-d H:i:s');
 
         $isArtiste = isset($_POST['role']) && $_POST['role'] === 'artiste' ? 1 : 0;
         $isCommercant = isset($_POST['role']) && $_POST['role'] === 'commercant' ? 1 : 0;
+        $isUser = isset($_POST['role']) && $_POST['role'] === 'Utilisateur' ? 1 : 0;
 
         $insertion = $connexion->prepare("INSERT INTO users 
-            (name, surname, email, number, password, id_photo, created_at, is_artiste, is_commercant) 
-            VALUES (:firstname, :surname, :email, :phonenumber, :password, :id_photo, :created_at, :isArtiste, :isCommercant)");
+        (name, surname, email, number, password, id_photo, created_at, is_artiste, is_commercant, is_admin, utilisateur) 
+        VALUES (:firstname, :surname, :email, :phonenumber, :password, :id_photo, :created_at, :isArtiste, :isCommercant, :isAdmin, :utilisateurgt)");
 
         $insertion->bindParam(':firstname', $firstname);
         $insertion->bindParam(':surname', $lastname);
@@ -85,6 +83,9 @@ try {
         $insertion->bindParam(':created_at', $created_at);
         $insertion->bindParam(':isArtiste', $isArtiste);
         $insertion->bindParam(':isCommercant', $isCommercant);
+        $insertion->bindParam(':isAdmin', $isAdmin);
+        $insertion->bindParam(':utilisateur', $isUser);
+
 
         $insertion->execute();
     }

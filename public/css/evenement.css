@@ -1,0 +1,403 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: inter;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 125px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.head{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 27%;
+}
+
+.profile{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.main-title{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+.profil-name{
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+
+.profile-picture{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-button{
+    font-size: 16px;
+    font-weight: 300;
+    background-color: red;
+}
+
+.hero{
+    position: relative;
+    margin: 50px 90px 0px 90px;
+}
+
+.who{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    gap: 14px;
+}
+
+.who-name{
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+}
+
+.adress{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.horaire{
+    margin: 0;
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.description{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.align{
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    flex-direction: row;
+}
+
+.music-test{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 30px;
+}
+
+.play-button{
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: solid 0;
+    background-image: url(../../src/image/play-button.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+
+.play-button:active{
+    filter:brightness(80%);
+}
+
+.map{
+    width: 640px;
+    height: 210px;
+    border-radius: 8px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+.others-musics{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.music{
+    position: relative;
+    width: 20%;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.music-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-bar{
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    bottom: 0;
+    gap: 5px;
+    background: #000;
+    color: #ffffff;
+}
+
+.title-bar .play-button{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 8px;
+    bottom: 20px;
+}
+
+.artist-profil-picture{
+    padding-left: 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+.in-coming{
+    margin: 0 90px 0 90px;
+}
+
+.window-title{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.in-coming-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.others-events{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+}
+
+.event-text{
+    padding-left: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+.event-image{
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    background: #7D7D7D;
+    object-fit: cover;
+}
+
+.event .title{
+    margin: 20px 0 8px 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.event-description{
+    margin: 0;
+    max-width: 600px;
+    max-height: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    overflow-y: scroll;
+}
+
+.event-description::-webkit-scrollbar{
+    width: 0;
+}
+
+.event .adress{
+    margin: 8px 0 -8px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000a4;
+}
+
+.event-date-info{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000a4;
+}
+
+.event .tickets-available{
+    padding: 80px 50px 0 0;
+}
+
+.event .icons{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 8px;
+    right: 0;
+}
+
+.event-icon{
+    padding-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 490px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+
+}
+
+.info-picture{
+    width: 100%;
+    height: 260px;
+    background: #B6B6B6;
+    object-fit: cover;
+}
+
+.info-text{
+    width: 260px;
+    height: 150px;
+    overflow-y: scroll;
+    scrollbar-color: red;
+}
+
+.info-text::-webkit-scrollbar{
+    width: 0;
+}
+
+.info-more{
+    padding-bottom: 20px;
+    color: #ff9A02;
+    border: none;
+    background: none;
+    font-family: inter;
+    font-weight: 700;
+}
+
+.others{
+    margin: 0 90px 0 90px;
+    overflow: hidden;
+}
+
+.others-artists{
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+.others-artists::-webkit-scrollbar{
+    width: 0;
+}
+
+.artist{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 330px;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #e1e1e1;
+    overflow: hidden;
+}
+
+.others-artist-background{
+    position: absolute;
+    min-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.artist-name{
+    z-index: 2;
+}
+
+.locate{
+    width: 50px;
+}
+
+.album-name, .locate, .event-date{
+    display: none;
+    z-index: 2;
+}
+
+.artist:hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 220px;
+    height: 330px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.artist:hover .others-artist-background{
+    filter: blur(4px);
+}
+
+.artist:hover .album-name, .artist:hover .locate, .artist:hover .event-date{
+    display: inline-block;
+}

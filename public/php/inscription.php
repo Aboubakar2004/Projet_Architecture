@@ -72,7 +72,7 @@ try {
 
         $insertion = $connexion->prepare("INSERT INTO users 
         (name, surname, email, number, password, id_photo, created_at, is_artiste, is_commercant, is_admin, utilisateur) 
-        VALUES (:firstname, :surname, :email, :phonenumber, :password, :id_photo, :created_at, :isArtiste, :isCommercant, :isAdmin, :utilisateurgt)");
+        VALUES (:firstname, :surname, :email, :phonenumber, :password, :id_photo, :created_at, :isArtiste, :isCommercant, :isAdmin, :utilisateur)");
 
         $insertion->bindParam(':firstname', $firstname);
         $insertion->bindParam(':surname', $lastname);

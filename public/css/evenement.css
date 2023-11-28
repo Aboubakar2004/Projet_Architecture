@@ -120,7 +120,7 @@ body{
     height: 80px;
     border-radius: 50px;
     border: solid 0;
-    background-image: url(../../src/image/play-button.svg);
+    background-image: url(../images/play-button.svg);
     background-size: cover;
     cursor: pointer;
 }

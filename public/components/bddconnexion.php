@@ -1,13 +1,8 @@
 <?php
 $serveur = "localhost";
 $utilisateur = "root";
-$baseDeDonnees = "archi_bdd";
-
-if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-    $motDePasse = "";
-} else {
-    $motDePasse = "root";
-}
+$motDePasse = "";
+$baseDeDonnees = "a.t bdd";
 
 try {
     $connexion = new PDO("mysql:host=$serveur;dbname=$baseDeDonnees", $utilisateur, $motDePasse);

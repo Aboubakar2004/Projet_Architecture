@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
+
+<body>
+
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="prenom">Prénom:</label>
+            <input class="rounded-sm py-1 pl-5 pr-16 focus:outline-none" type="text" id="prenom" name="prenom"><br>
+
+            <label for="nom">Nom:</label>
+            <input class="rounded-sm py-1 pl-5 pr-16 focus:outline-none" type="text" id="nom" name="nom"><br>
+
+            <label for="email">Email:</label>
+            <input class="rounded-sm py-1 pl-5 pr-16 focus:outline-none" type="email" id="email" name="email"><br>
+
+            <label for="telephone">Téléphone:</label>
+            <input class="rounded-sm py-1 pl-5 pr-16 focus:outline-none" type="tel" id="telephone" name="telephone"><br>
+
+            <label for="password">Mot de passe:</label>
+            <input class="rounded-sm py-1 pl-5 pr-16 focus:outline-none" type="password" id="password" name="password"><br>
+
+            <label for="artiste">Artiste</label>
+            <input type="radio" id="artiste" name="role" value="artiste"><br>
+
+            <label for="commercant">Commerçant</label>
+            <input type="radio" id="commercant" name="role" value="commercant"><br>
+
+            <label for="Utilisateur">Utilisateur</label>
+            <input type="radio" id="Utilisateur" name="role" value="Utilisateur"><br>
+        </div>
+
+        <div>
+            <label for="pieceIdentite">Pièce d'Identité (PDF):</label>
+            <input type="file" id="pieceIdentite" name="pieceIdentite" accept=".pdf"><br>
+        </div>
+
+        <div>
+            <button type="submit">Valider</button>
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+const $menuLis = document.querySelectorAll('.menu ul li');
+const $galleryItems = document.querySelectorAll('.gallery-item');
+const $playerIcons = document.querySelectorAll('div .player_btn');
+const $muteIcons = document.querySelectorAll('div .mute_btn');
+var volIcon = document.querySelector('.volume')
+var volBox = document.querySelector('.volume-box')
+var volumeRange = document.querySelector('.volume-range')
+var volumeDown = document.querySelector('.volume-down')
+var volumeUp = document.querySelector('.volume-up')
+var music = document.querySelector('.music-element')
+var playBtn = document.querySelector('.play')
+var seekbar = document.querySelector('.seekbar')
+var currentTime = document.querySelector('.current-time')
+var duration = document.querySelector('.duration')
+
+
+
+
+
+
+$menuLis.forEach($menuLi => {
+    $menuLi.addEventListener('click', function () {
+
+        $menuLis.forEach($otherLi => {
+            if ($otherLi !== $menuLi) {
+                $otherLi.classList.remove('active');
+            }
+        });
+
+        $menuLi.classList.add('active');
+    });
+});
+
+
+$playerIcons.forEach($playerIcon => {
+$playerIcon.addEventListener('click', function () {
+    $playerIcons.forEach($otherPlayerIcon => {
+        if ($otherPlayerIcon !== $playerIcon) {
+            $otherPlayerIcon.classList.remove('iconActive')
+        }
+    });
+    $playerIcon.classList.add('iconActive')
+})
+});
+
+
+$muteIcons.forEach($muteIcon => {
+$muteIcon.addEventListener('click', function () {
+$muteIcons.forEach($otherMuteIcon => {
+    if ($otherMuteIcon !== $muteIcon) {
+        $otherMuteIcon.classList.remove('muteActive')
+    }
+});
+$muteIcon.classList.add('muteActive')
+})
+});
+
+
+$galleryItems.forEach($galleryItem => {
+    $galleryItem.addEventListener('mouseover', function () {
+
+        $galleryItems.forEach($othergalleryItem => {
+            if ($othergalleryItem !== $galleryItem) {
+                $othergalleryItem.classList.remove('imgactive');
+            }
+        });
+
+        $galleryItem.classList.add('imgactive');
+    });
+
+});
+
+
+$galleryItem.addEventListener('mouseenter', function () {
+
+
+    $galleryItems.forEach($othergalleryItem => {
+        if ($othergalleryItem !== $galleryItem) {
+            $othergalleryItem.classList.add('imgactive');
+        }
+    });
+
+    $galleryItem.classList.remove('imgactive');
+});
+
+function handlePlay() {
+    if (music.paused) {
+        music.play();
+        playBtn.className = 'pause'
+        playBtn.innerHTML = '<i class="material-icons">pause</i>'
+    } else {
+        music.pause();
+        playBtn.className = 'play'
+        playBtn.innerHTML = '<i class="material-icons">play_arrow</i>'
+    }
+    music.addEventListener('ended', function () {
+        playBtn.className = 'play'
+        playBtn.innerHTML = '<i class="material-icons">play_arrow</i>'
+        music.currentTime = 0
+    });
+}
+
+music.onloadeddata = function () {
+    seekbar.max = music.duration
+    var ds = parseInt(music.duration % 60)
+    var dm = parseInt((music.duration / 60) % 60)
+    duration.innerHTML = dm + ':' + ds
+}
+music.ontimeupdate = function () { seekbar.value = music.currentTime }
+handleSeekBar = function () { music.currentTime = seekbar.value }
+music.addEventListener('timeupdate', function () {
+    var cs = parseInt(music.currentTime % 60)
+    var cm = parseInt((music.currentTime / 60) % 60)
+    currentTime.innerHTML = cm + ':' + cs
+}, false)
+
+var favIcon = document.querySelector('.favorite')
+function handleFavorite() {
+    favIcon.classList.toggle('active');
+}
+var repIcon = document.querySelector('.repeat')
+function handleRepeat() {
+    if (music.loop == true) {
+        music.loop = false
+        repIcon.classList.toggle('active')
+    }
+    else {
+        music.loop = true
+        repIcon.classList.toggle('active')
+    }
+}
+
+function handleVolume() {
+    volIcon.classList.toggle('active')
+    volBox.classList.toggle('active')
+}
+
+volumeDown.addEventListener('click', handleVolumeDown);
+volumeUp.addEventListener('click', handleVolumeUp);
+
+function handleVolumeDown() {
+    volumeRange.value = Number(volumeRange.value) - 20
+    music.volume = volumeRange.value / 100
+}
+function handleVolumeUp() {
+    volumeRange.value = Number(volumeRange.value) + 20
+    music.volume = volumeRange.value / 100
+}
